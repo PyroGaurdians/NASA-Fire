@@ -1,0 +1,38 @@
+/* Navbar styling */
+.sticky-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Set your desired background color */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 100; /* Adjust the z-index if needed */
+}
+
+.sticky-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.sticky-navbar li {
+  margin: 0;
+  padding: 0;
+  margin-right: 20px; /* Adjust the spacing between items */
+}
+
+.sticky-navbar a {
+  text-decoration: none;
+  color: #333; /* Set your desired text color */
+  font-size: 20px; /* Adjust the font size */
+}
+
+/* Adjust the icon size if needed */
+.sticky-navbar svg {
+  width: 24px;
+  height: 24px;
+}
