@@ -1,0 +1,67 @@
+/* Apply general styles to the form */
+*{
+    margin:0px;
+    padding:0px;
+}
+.container {
+    margin: 0px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 96vh;
+  
+  }
+  form {
+    background-color:#2f2c2c;
+    padding:30px;
+    border-radius: 20px;
+    text-align: start;
+    color:#efecec;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+  }
+  
+  /* Style the selected danger rate radio buttons */
+
+  
+
+ input[type="radio"] {
+    width: 24px ;
+    height: 24px ;
+  }
+  form >div  {
+    margin-top:15px;
+  }
+  form > div >  label {
+    margin-bottom:5px;
+  }
+  .selected-inner {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .selected-inner div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+  
+
+  /* Add additional styles as needed */
+  

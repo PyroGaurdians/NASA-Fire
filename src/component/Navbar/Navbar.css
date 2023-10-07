@@ -3,20 +3,21 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: #fff; /* Set your desired background color */
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
   display: flex;
-  justify-content: space-around;
   padding: 10px;
   z-index: 100; /* Adjust the z-index if needed */
 }
 
 .sticky-navbar ul {
+  width: 100vw;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .sticky-navbar li {
@@ -35,4 +36,13 @@
 .sticky-navbar svg {
   width: 24px;
   height: 24px;
+}
+
+.sticky-navbar li:hover {
+  color: #007BFF;
+  
+}
+.sticky-navbar  a.active {
+  color: #007BFF !important;
+
 }
