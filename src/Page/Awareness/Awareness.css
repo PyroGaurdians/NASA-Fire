@@ -8,16 +8,17 @@
     text-align: center;
     font-family: "Roboto Slab";
 }
-.top {
-
+.main-content a {
+    text-decoration: none;
+}
+.main-content a:hover {
+    transform:scale(1.1);
 }
 .top p {
     margin:auto;
     margin-bottom: 40px;
     text-align: justify;
     padding:15px;
-
-
 }
 .main-content {
     display: grid;
@@ -33,7 +34,6 @@
 }
 .main-content div p{
     margin:0px !important;
-    /* color:#e0342f; */
 }
 .main-content svg {
     font-size:30px;

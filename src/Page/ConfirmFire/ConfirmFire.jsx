@@ -1,5 +1,8 @@
+import "./ConfirmFire.css"
 
-const Report = () => {
+const MyComponent = () => {
+
+
   return (
     <div className="container">
         <form>
@@ -50,7 +53,7 @@ const Report = () => {
                 </div>
         </form>
     </div>
-  )
-}
+  );
+};
 
-export default Report
+export default MyComponent;
