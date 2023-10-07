@@ -1,8 +1,11 @@
-
+:root {
+  --bg-color:white;
+}
 
 body {
   margin:0px;
   padding:0px;
   box-sizing: border-box;
-  
+  background-color: var(--bg-color);
+  color:#222;
 }
