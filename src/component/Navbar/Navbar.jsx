@@ -1,7 +1,7 @@
 import { AiFillHome } from "react-icons/ai";
 import { GiAwareness } from "react-icons/gi";
 import { MdReportProblem } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
+import { FaUserAlt } from "react-icons/fa";
 import { RiRoadMapFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -20,7 +20,7 @@ const Navbar = () => {
           <MdReportProblem />
         </NavLink>
         <NavLink to='/profile'>
-          <CgProfile />
+          <FaUserAlt />
         </NavLink>
         <NavLink to='/map'>
           <RiRoadMapFill />
