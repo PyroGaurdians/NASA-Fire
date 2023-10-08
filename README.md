@@ -1,16 +1,2 @@
 # NASA-Fire
--  Nasa challenge fire
-
-# End points
-
-1. `/api/v1/nearby-fires`
-   1. Data:
-      ```json
-      {
-        "confirmed": true,
-        "location": {"lng":0, "lat":0},
-        "start_time": "iso-format",
-        "danger": 5,
-        // other form values
-      }
-      ```
+This project describes a novel use of technology and publically available data to enable local communities to report, monitor, and even predict fires in forests using satellite data fires and/or enhance present data dissemination.
