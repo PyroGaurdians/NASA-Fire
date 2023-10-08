@@ -9,3 +9,7 @@ body {
   background-color: var(--bg-color);
   color:#222;
 }
+
+#root {
+  height: 100vh;
+}
