@@ -1,12 +1,13 @@
 import "./DealFire.css"
-import one from "../../Images/OneO.jfif"
-import Two from "../../Images/Two.jfif"
-import Three from "../../Images/Three.jfif"
+import one from "../../Images/speaker.jpg"
+import Two from "../../Images/gas.jpg"
+import Three from "../../Images/fire.jpg"
 import Four from "../../Images/Four.jfif"
 
 const DealFire = () => {
   return (
-      <div className="container">
+      <div className="container" style={{marginBottom:"30px"}}>
+        <h1 style={{marginBottom:"40px", marginTop:"50px"}}>How to deal with fire</h1>
           <section className="">
             <img src={one} alt="imag"/>
             <div className="txt">

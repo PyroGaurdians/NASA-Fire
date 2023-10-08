@@ -1,0 +1,45 @@
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500;600&display=swap');
+
+  .fire-situtation 
+{
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.class-a h3 {
+    text-align: center;
+    background-color: #222;
+    color:#eee;
+    padding:8px 15px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+
+.class-a .card {
+    width: min(350px, 96vw);
+    background-color: #eee;
+    border-radius: 20px;
+}
+.class-a .card img {
+    width:100%;
+    border-radius: 20px 20px 0px  0px;
+}
+.class-a .card .txt {
+    padding:20px;
+    line-height: 1.4;
+    
+}
+.class-a .card .txt h4 {
+    font-size:22px;
+    margin-bottom: 10px;
+
+}
+
+
+
