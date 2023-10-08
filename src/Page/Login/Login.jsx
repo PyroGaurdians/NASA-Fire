@@ -1,10 +1,15 @@
 import { useRef, useState } from "react";
 import "./login.css"
-import ourAxios from "../../api/ourAxios"
+import ourAxios from "../../api/unprotectedAxios"
 import { useContext } from "react";
 import { UserInfo } from "../../App";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Login = () => {
 	const [username, setUserName] = useState("")
+	const loginNotify = () => toast.success("You are login successfully");
+	const RegisterNotify = () => toast.success("You are register successfully");
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const { setUserLog, setUserNames, setUserEmail} = useContext(UserInfo)
@@ -26,7 +31,8 @@ const Login = () => {
 			setUserLog(true)
 			setUserNames(username)
 			setUserEmail(email)
-
+			loginNotify();
+			
 		})
 		.catch(error => console.log(error))
 
@@ -41,10 +47,9 @@ const Login = () => {
 			re_password: password,
 		}
 		ourAxios.post("/api/auth/users/", sendedObject).
-		then(res => {
-			console.log(res)
+		then(() => {
 			loginRef.current.click()
-			
+			RegisterNotify();
 		})
 		.catch(error => console.log(error))
 	}

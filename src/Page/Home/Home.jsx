@@ -5,7 +5,8 @@ import "./Home.css"
 // import { useContext } from "react";
 // import {AuthContext}  from "../../App"
 const Home = () => {
-  const [unconfirmedData, setUnconfirmData] = useState([{
+  
+  const [unconfirmedData] = useState([{
     "confirmed": true,
   "location": {"lng":0, "lat":0},
   "start_time": "iso-format",
@@ -16,7 +17,7 @@ const Home = () => {
   "start_time": "iso-format",
   "danger": 5,
   }])
-  const [confirmedData, setconfirmData] = useState([{
+  const [confirmedData] = useState([{
     "confirmed": true,
   "location": {"lng":0, "lat":0},
   "start_time": "iso-format",

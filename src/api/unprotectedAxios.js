@@ -7,21 +7,10 @@ const ourAxios = axios.create({
 // Add an interceptor to modify the request headers
 ourAxios.interceptors.request.use(
   (config) => {
-    // Get the JWT from your storage (e.g., localStorage or sessionStorage)
-    const jwtToken = localStorage.getItem("accessToken");
     config.headers["Content-Type"] = `application/json`;
-
-    // If a JWT token exists, add it to the headers
-    if (jwtToken) {
-      config.headers.Authorization = `JWT ${jwtToken}`;
-    }
-
     return config;
   },
   (error) => {
-    if (error.status == 401) {
-      location.href = "/logout";
-    }
     return Promise.reject(error);
   }
 );

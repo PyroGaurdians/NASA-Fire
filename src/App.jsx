@@ -12,9 +12,12 @@ import ConfirmFire from "./Page/ConfirmFire/ConfirmFire";
 import FireSitutation from "./Page/Fire Situtation/FireSitutation";
 import Map from "./Page/Map/Map";
 import { createContext, useEffect, useState } from "react";
-
+import { ToastContainer } from 'react-toastify';
 export const UserInfo = createContext(null)
-
+function Logout() {
+    localStorage.setItem("isLogged", "false")
+    location.href="/"
+}
 function App() {
   const [userlog, setUserLog] = useState("");
   const [userName, setUserNames] = useState("");
@@ -30,6 +33,8 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
+
       <UserInfo.Provider value={values}>
               {isLogged == "true" || userlog?(
             <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
@@ -42,6 +47,7 @@ function App() {
                   <Route element={<DealFire />} path='/awareness/dealfire' />
                   <Route element={<Evactuate />} path='/awareness/evactuate' />
                   <Route element={<ConfirmFire />} path='/awareness/confirmFire' />
+                  <Route element={<Logout />} path='/logout' />
                   <Route
                     element={<FireSitutation />}
                     path='/awareness/firesitutation'
