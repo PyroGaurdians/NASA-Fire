@@ -60,7 +60,7 @@ const FireSitutation = () => {
 
       {/* Class D */}
       <section className="class-a">
-        <h3 style={{marginTop:"30px"}}>Class C</h3>
+        <h3 style={{marginTop:"30px"}}>Class D</h3>
         <div className="card">
           <img src={WoodFire} alt="Wood fire" />
           <div className="txt" style={{marginBottom:"30px"}}>

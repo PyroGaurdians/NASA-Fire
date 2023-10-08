@@ -1,10 +1,10 @@
-
+import './Report.css'
 const Report = () => {
   return (
     <div className="container">
-        <form>
+        <form className="form">
             <div >
-                <label htmlFor="loc">Location</label>
+                <label >Location</label>
                 <input type="text" id="loc" />
             </div>
             <div>

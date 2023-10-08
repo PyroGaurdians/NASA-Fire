@@ -12,7 +12,7 @@
     min-height: 96vh;
   
   }
-  form {
+  .container .forms {
     background-color:#2f2c2c;
     padding:30px;
     border-radius: 20px;

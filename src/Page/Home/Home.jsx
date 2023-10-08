@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Button.css"
 import "./Home.css"
+// import { useContext } from "react";
+// import {AuthContext}  from "../../App"
 const Home = () => {
   const [unconfirmedData, setUnconfirmData] = useState([{
     "confirmed": true,
@@ -31,6 +33,12 @@ const Home = () => {
   return (
     <>
       <main>
+        {/* Remove This */}
+        {/* <div className="notification">
+            <span className="close-button" >&times;</span>
+            <span>This is a notification message.</span>
+        </div> */}
+
           {unconfirmedData.length?  
           (
             <>

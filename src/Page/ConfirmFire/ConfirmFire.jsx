@@ -5,7 +5,7 @@ const MyComponent = () => {
 
   return (
     <div className="container">
-        <form>
+        <form className="forms">
             <div >
                 <label htmlFor="loc">Location</label>
                 <input type="text" id="loc" />
