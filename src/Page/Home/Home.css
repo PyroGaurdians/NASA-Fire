@@ -42,8 +42,11 @@ main .unconfirmed > div p:nth-of-type(1) {
     border-radius: 4px;
     
 } */
+.ReadMore {
+    margin-bottom: 30px;
+
+}
 .ReadMore a:is(:not(:active),:active) {
     color:blue;
     text-decoration: none;
-    margin-bottom: 40px;
 }

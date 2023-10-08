@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Button.css"
 import "./Home.css"
 const Home = () => {
@@ -89,7 +89,7 @@ const Home = () => {
                   <p>{ele.danger}</p>
                 </div>
                 <div>
-                  
+
                 </div>
               </section>
             ))}
