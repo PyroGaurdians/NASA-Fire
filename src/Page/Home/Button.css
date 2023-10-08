@@ -1,0 +1,71 @@
+.send-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+.button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .button:hover {
+    box-shadow: .5px .5px 100px #252525;
+  }
+  
+  .type1::after,
+  .type2::after {
+    content: "Fire";
+    height: 50px;
+    width: 100px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: .9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1::before,
+  .type2::before {
+    content: "Confirm";
+    height: 50px;
+    width: 100px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: .9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  .type2::before
+  {
+    content:"Desclined"
+  }
+  
+  .type1:hover::after,
+  .type2:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .type1:hover::before,
+  .type2:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }
