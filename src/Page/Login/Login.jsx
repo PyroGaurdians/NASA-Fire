@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./login.css"
 import ourAxios from "../../api/ourAxios"
-
+import { useContext } from "react";
+import { UserInfo } from "../../App";
 const Login = () => {
 	const [username, setUserName] = useState("")
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
-
+	const { setUserLog, setUserNames, setUserEmail} = useContext(UserInfo)
+	const loginRef = useRef(null);
 	const handleLogin = (e) => {
 		e.preventDefault()
 
@@ -19,12 +21,16 @@ const Login = () => {
 		ourAxios.post("/api/auth/token/", sendobject)
 		.then(response =>{
 			localStorage.setItem("accessToken",response.data.access)
-			localStorage.setItem("isLogged", true)
-			console.log(localStorage.getItem("isLogged"));
+			localStorage.setItem("isLogged", "true");
+
+			setUserLog(true)
+			setUserNames(username)
+			setUserEmail(email)
 
 		})
 		.catch(error => console.log(error))
 
+		
 	}
 	const handleRegister = (e) => {
 		e.preventDefault()
@@ -32,12 +38,13 @@ const Login = () => {
 			username,
 			password,
 			email,
-			repassword: password,
+			re_password: password,
 		}
-		ourAxios.post("/api/auth/token/", sendedObject).
+		ourAxios.post("/api/auth/users/", sendedObject).
 		then(res => {
 			console.log(res)
-			localStorage.setItem("accessToken", res.data.access )
+			loginRef.current.click()
+			
 		})
 		.catch(error => console.log(error))
 	}
@@ -61,8 +68,8 @@ const Login = () => {
 			<input type="checkbox" id="chk" aria-hidden="true"/>
 
 				<div className="login">
-					<form className="formsd" onSubmit={handleLogin}>
-						<label htmlFor="chk" aria-hidden="true">Log in</label>
+					<form className="formsd" onSubmit={handleLogin} >
+						<label htmlFor="chk" aria-hidden="true" ref={loginRef}>Log in</label>
 						<input className="input" type="text" value={username} name="username" placeholder="username" required="" onChange={handleUsernameChange}/>
 						<input className="input" type="password" value = {password} name="pswd" placeholder="Password" required="" onChange={handlePasswordChange}/>
 						<button>Log in</button>

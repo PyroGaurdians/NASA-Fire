@@ -16,12 +16,18 @@ import { Marker, Popup } from "react-leaflet";
 //   "daynight": "N",
 //   "type": 1
 // },
+
+
 export default function FireMarker(fire) {
   return (
     <Marker position={[fire.latitude, fire.longitude]}>
       <Popup>
         <h3>MODIS Data</h3>
         <ul>
+
+          <li>Date: {fire.acq_date}</li>
+          <li>Day/Night: {fire.daynight}</li>
+          <li>confidence: {fire.confidence}%</li>
           <li>Latitude: {fire.latitude}</li>
           <li>Longitude: {fire.longitude}</li>
         </ul>

@@ -11,44 +11,53 @@ import Evactuate from "./Page/EvactuateFire/Evactuate";
 import ConfirmFire from "./Page/ConfirmFire/ConfirmFire";
 import FireSitutation from "./Page/Fire Situtation/FireSitutation";
 import Map from "./Page/Map/Map";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
+export const UserInfo = createContext(null)
 
 function App() {
+  const [userlog, setUserLog] = useState("");
+  const [userName, setUserNames] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const values = {userlog, setUserLog, userName, setUserNames, userEmail, setUserEmail}
+
   const [isLogged, setIsLogged] = useState(false)
   useEffect(() => {
     setIsLogged(localStorage.getItem("isLogged"));
-
   },[])
+
 
 
   return (
     <>
-      {isLogged == "true"?(
-     
-          <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <div style={{ height: "100%", overflowX: "hidden", overflowY: "auto" }}>
-              <Routes>
-                <Route element={<Home />} path='/' />
-                <Route element={<Awareness />} path='/awareness' />
-                <Route element={<Report />} path='/report' />
-                <Route element={<DealFire />} path='/awareness' />
-                <Route element={<DealFire />} path='/awareness/dealfire' />
-                <Route element={<Evactuate />} path='/awareness/evactuate' />
-                <Route element={<ConfirmFire />} path='/awareness/confirmFire' />
-                <Route
-                  element={<FireSitutation />}
-                  path='/awareness/firesitutation'
-                />
-                <Route element={<Map />} path='/map' />
-              </Routes>
-            </div>
+      <UserInfo.Provider value={values}>
+              {isLogged == "true" || userlog?(
+            <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+              <div style={{ height: "100%", overflowX: "hidden", overflowY: "auto" }}>
+                <Routes>
+                  <Route element={<Home />} path='/' />
+                  <Route element={<Awareness />} path='/awareness' />
+                  <Route element={<Report />} path='/report' />
+                  <Route element={<DealFire />} path='/awareness' />
+                  <Route element={<DealFire />} path='/awareness/dealfire' />
+                  <Route element={<Evactuate />} path='/awareness/evactuate' />
+                  <Route element={<ConfirmFire />} path='/awareness/confirmFire' />
+                  <Route
+                    element={<FireSitutation />}
+                    path='/awareness/firesitutation'
+                  />
+                  <Route element={<Map />} path='/map' />
+                </Routes>
+              </div>
 
-            <Navbar />
-          </div> 
-        
-          ): <Login />}
+              <Navbar />
+            </div> 
+          
+            ): <Login />}
+          </UserInfo.Provider>
+
         </>
+
   );
 }
 
