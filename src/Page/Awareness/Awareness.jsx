@@ -6,13 +6,13 @@ const Awareness = () =>{
 
   return (
     <>
-    <main className="container">
+    <main className="contain">
 
       <section className="top">
           <h1>Awareness</h1>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla iste culpa sint porro dolorem fugiat deserunt quaerat animi, velit ullam, eveniet cum perspiciatis ipsa consectetur fugit corrupti nobis adipisci quisquam quia sunt temporibus non. Asperiores neque ad ut atque, nihil at magnam nostrum eaque laudantium quisquam aliquid animi a aliquam?</p>
       </section>
-      <section className="main-content">
+      <section className="ma-content">
           <NavLink to="dealfire">
               <div className="card-1">
                   <AiFillFire />

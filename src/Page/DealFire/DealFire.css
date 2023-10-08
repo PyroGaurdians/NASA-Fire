@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap');
+
+div.container
+{
+    font-family: 'Roboto Flex', sans-serif;
+}
+div.container section {
+    width:min(300px, 96vw);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    margin-bottom:15px;
+
+}
+div.container img {
+    width:100%;
+    margin-bottom: 10px;
+    border-radius: 15px 15px 0px 0px;
+    border:none;
+
+}
+div.container .txt {
+    text-align: start;
+    padding:10px;
+    /* background-color: #eee; */
+    color:#3c3c3c;
+}
+div.container .txt h3  {
+        margin:0px 0px 10px;
+    }

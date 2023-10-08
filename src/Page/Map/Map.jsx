@@ -7,7 +7,7 @@ import FireMarker from "./FireMarker";
 
 export default function Map() {
   const position = [51.505, -0.09];
-  console.log(data);
+  // console.log(data);
 
   return (
     <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
